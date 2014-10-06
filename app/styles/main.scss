@@ -3,24 +3,81 @@
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
 
 // Custom Styles
+$lightBlue:HSLA(185, 100%, 46%, 1);
+$darkBlue:HSLA(184, 100%, 42%, 1);
+$borderColor:HSLA(185, 100%, 38%, 1);
+
 body {
   background: #fafafa;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333;
+  text-align:center;
+  overflow: auto;
+  padding:30px;
 }
 
-.hero-unit {
-  margin: 50px auto 0 auto;
-  width: 600px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: #eee;
-  border-radius: 6px;
-  padding: 60px;
-  h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
+.accordion {
+width: 500px;
+display:inline-block;
+margin: 0 auto;
+border:1px solid $borderColor;
+
+
+  .closedBox {
+  float: left;
+  overflow: hidden;
+  padding:0px;
+
+    h2 {
+      background-color:$lightBlue;
+      text-align:left;
+      color:white;
+      font-size:20px;
+      line-height:.9;
+      display:block;
+      padding:20px;
+      margin:0;
+      border-bottom:1px solid $borderColor;
+    }
+
+    .boxText {
+      color: lightgray;
+      height: 0px;
+      margin:0;
+      padding:0;
+
+      p {
+        display: inline;
+      }
+    }
+  }
+
+  .clickedBox {
+  float: left;
+  overflow: hidden;
+  padding:0px;
+
+    h2 {
+      background-color:$darkBlue;
+      text-align:left;
+      color:white;
+      font-size:20px;
+      line-height:.9;
+      display:block;
+      padding:20px;
+      margin:0;
+      border-bottom:1px solid $borderColor;
+    }
+
+    .boxText {
+      color: lightgray;
+      height: auto;
+      margin:0;
+      padding:20px;
+      transition:height 1s ease;
+      p {
+        display: inline;
+      }
+    }
   }
 }
