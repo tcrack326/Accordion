@@ -1,3 +1,3 @@
-## Yo, I'm a Readme
+## Accordion with CSS and JQuery
 
-You should probably update me so people looking at your code have an idea what it is being used for :)
+This is the assignment at Iron Yard to create an accordion-style collapsing windows using jQuery with CSS Transitions.
